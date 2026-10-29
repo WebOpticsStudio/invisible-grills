@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-manrope: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #080B11; /* Luxury Obsidian Charcoal Canvas */
+    color: #94A3B8; /* Silvery Slate body text */
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+    color: #FFFFFF; /* Crisp White heading */
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  /* Fluid typography */
+  h1 {
+    font-size: clamp(2.25rem, 1.8rem + 2.25vw, 4rem);
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 1.4rem + 1.6vw, 2.75rem);
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
+  }
+
+  :focus-visible {
+    outline: 2px solid #C5A880; /* Warm Champagne Gold */
+    outline-offset: 3px;
+  }
+
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *:not(.animate-marquee-track):not(.animate-marquee-track *) {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Subtle architectural tension line styling (Stainless steel cable aesthetic) */
+.wire-backdrop {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 23px,
+    rgba(100, 116, 139, 0.12) 23px,
+    rgba(100, 116, 139, 0.12) 24px
+  );
+}
+
+.wire-backdrop-dark {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 23px,
+    rgba(100, 116, 139, 0.15) 23px,
+    rgba(100, 116, 139, 0.15) 24px
+  );
+}
+
+/* Continuous Infinite Marquee Animation (Right to Left) */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  animation: marquee-scroll 25s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-marquee-track:hover {
+  animation-play-state: paused !important;
+}
