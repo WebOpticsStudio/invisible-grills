@@ -105,24 +105,24 @@ export default function ConsultationSection() {
 
           {/* Contact Numbers */}
           <div className="space-y-5">
-            <div>
-              <p className="text-[10px] tracking-widest text-gray-500 uppercase font-medium">Primary Studio Line</p>
-              <a
-                href={telLink(site.phone)}
-                className="text-xl font-semibold mt-0.5 block hover:text-[#dca869] transition-colors"
-              >
-                +91 83282 59791
-              </a>
-            </div>
-            <div>
-              <p className="text-[10px] tracking-widest text-gray-500 uppercase font-medium">Secondary Line</p>
-              <a
-                href={telLink(site.phoneSecondary)}
-                className="text-xl font-semibold mt-0.5 block hover:text-[#dca869] transition-colors"
-              >
-                +91 78936 74358
-              </a>
-            </div>
+              <div>
+                <p className="text-[10px] tracking-widest text-gray-500 uppercase font-medium">Primary Studio Line</p>
+                <a
+                  href={telLink(site.phone)}
+                  className="text-xl font-semibold mt-0.5 block hover:text-[#dca869] transition-colors"
+                >
+                  {site.phoneDisplay}
+                </a>
+              </div>
+              <div>
+                <p className="text-[10px] tracking-widest text-gray-500 uppercase font-medium">Secondary Line</p>
+                <a
+                  href={telLink(site.phoneSecondary)}
+                  className="text-xl font-semibold mt-0.5 block hover:text-[#dca869] transition-colors"
+                >
+                  {site.phoneSecondaryDisplay}
+                </a>
+              </div>
 
             <a
               href={whatsappLink("Hello CLEARVIEW, I would like to arrange an on-site structural consultation.")}

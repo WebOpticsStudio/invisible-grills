@@ -12,12 +12,12 @@ export const site = {
 
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
   
-  // Primary and secondary verified contact numbers from reference
-  phone: "+918328259791",
-  phoneDisplay: "+91 83282 59791",
-  phoneSecondary: "+917893674358",
-  phoneSecondaryDisplay: "+91 78936 74358",
-  whatsapp: "918328259791",
+  // Primary and secondary contact numbers (placeholder fake numbers)
+  phone: "+919876543210",
+  phoneDisplay: "+91 98765 43210",
+  phoneSecondary: "+918123456789",
+  phoneSecondaryDisplay: "+91 81234 56789",
+  whatsapp: "919876543210",
   email: process.env.NEXT_PUBLIC_EMAIL ?? "enquiries@clearview-safety.in",
   address: process.env.NEXT_PUBLIC_ADDRESS ?? "Technical Center & Studio: Bengaluru, Karnataka (Installation services exclusively in Bangalore)",
   hours: process.env.NEXT_PUBLIC_HOURS ?? "Mon–Sat: 9:00 AM – 7:00 PM | Sun: By Appointment",

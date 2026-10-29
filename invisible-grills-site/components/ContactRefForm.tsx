@@ -145,7 +145,7 @@ export function ContactRefForm({ initialService = "" }: { initialService?: strin
               name="phone"
               type="tel"
               required
-              placeholder="Phone Number"
+              placeholder="Phone Number (e.g. 98765 43210)"
               value={formData.phone}
               onChange={handleChange}
               className="w-full rounded-xl border border-slate-800 bg-[#1A2230] px-4 py-3.5 text-sm text-white placeholder-slate-400 focus:border-[#C5A880] focus:bg-[#20293A] focus:outline-none focus:ring-1 focus:ring-[#C5A880] transition-colors"
